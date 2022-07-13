@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # DWM dependencies
-sudo pacman -S base-devel libx11 libxft libxinerama freetype2 fontconfig
+sudo pacman -S base-devel libx11 libxft libxinerama freetype2 fontconfig ttf-ubuntu-font-family
 
 # Wallpaper dependencies
 sudo pacman -S feh
