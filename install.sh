@@ -13,7 +13,7 @@ compile () {
   cd $1
   make
   sudo make clean install
-  rm -f $1 *.o config.h
+  rm -f $1 *.o config.h stest blocks.h
   cd ..
 }
 
