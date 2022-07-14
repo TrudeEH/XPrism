@@ -1,5 +1,11 @@
 # TruDE
 
+## TODO
+[] Add tabbed
+[] Add a minimal browser (like surf)
+[] Write the wiki
+[] README.md
+
 ### DWM Patches
 - BAR_SYSTRAY_PATCH
 - BAR_HEIGHT_PATCH

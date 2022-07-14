@@ -13,12 +13,12 @@ compile () {
   cd $1
   make
   sudo make clean install
-  rm -f $1 *.o config.h stest blocks.h
+  rm -f $1 *.o */*.o config.h stest
   cd ..
 }
 
 compile "dwm"
-compile "dwmblocks"
+compile "slstatus"
 compile "st"
 compile "dmenu"
 compile "slock"
