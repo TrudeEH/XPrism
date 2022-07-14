@@ -1,2 +1,2 @@
 dwmblocks &
-feh --bg-fill bg.jpg
+feh --bg-fill ~/.local/share/dwm/bg.jpg
