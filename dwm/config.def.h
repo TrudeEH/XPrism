@@ -252,7 +252,7 @@ static const char *dmenucmd[] = {
 };
 static const char *termcmd[]  = { "st", NULL };
 
-
+static const char *slock[] = { "slock", NULL };
 
 static Key keys[] = {
 	/* modifier                     key            function                argument */
@@ -288,6 +288,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_c,          killclient,             {0} },
 	{ MODKEY|ShiftMask,             XK_q,          quit,                   {0} },
 	{ MODKEY|ControlMask|ShiftMask, XK_q,          quit,                   {1} },
+	{ MODKEY|ControlMask|ShiftMask, XK_l,	       spawn,		       {.v = slock } },
 	{ MODKEY,                       XK_t,          setlayout,              {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,          setlayout,              {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,          setlayout,              {.v = &layouts[2]} },
