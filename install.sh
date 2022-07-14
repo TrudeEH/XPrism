@@ -21,6 +21,7 @@ compile "dwm"
 compile "dwmblocks"
 compile "st"
 compile "dmenu"
+compile "slock"
 
 # Save autostart
 mkdir -p ~/.local/share/dwm/
