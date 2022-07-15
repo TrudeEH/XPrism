@@ -24,17 +24,19 @@ static const unsigned int alphas[][3]      = {
 	[SchemeHp] = { OPAQUE, baralpha, borderalpha },
 };
 
-static
-const
-char *colors[][2] = {
-	/*               fg         bg       */
-	[SchemeNorm] = { "#bbbbbb", "#222222" },
-	[SchemeSel]  = { "#eeeeee", "#005577" },
-	[SchemeOut]  = { "#000000", "#00ffff" },
-	[SchemeBorder] = { "#000000", "#005577" },
-	[SchemeSelHighlight]  = { "#ffc978", "#005577" },
-	[SchemeNormHighlight] = { "#ffc978", "#222222" },
-	[SchemeHp]   = { "#bbbbbb", "#333333" },
+static char colorBg[]			 = "#282a36";
+static char colorFg[]			 = "#f8f8f2";
+static char colorPrimary[]		 = "#bd93f9";
+
+static const char *colors[][2] = {
+	/*                          fg         bg       */
+	[SchemeNorm]          = { colorFg,       colorBg },
+	[SchemeSel]           = { colorBg,       colorPrimary },
+	[SchemeOut]           = { colorFg,       colorBg },
+	[SchemeBorder]        = { colorPrimary, colorPrimary },
+	[SchemeSelHighlight]  = { colorBg,       colorPrimary },
+	[SchemeNormHighlight] = { colorPrimary,  colorBg },
+	[SchemeHp]            = { colorFg,       colorBg },
 };
 
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */

@@ -30,8 +30,6 @@ static int tiledindicatortype            = INDICATOR_NONE;
 static int floatindicatortype            = INDICATOR_TOP_LEFT_SQUARE;
 static const int quit_empty_window_count = 0;   /* only allow dwm to quit if no (<= count) windows are open */
 static const char *fonts[]               = { "Ubuntu Mono:size=10" };
-static const char dmenufont[]            = "Ubuntu Mono:size=10";
-
 static char colorNone[]                    = "#000000"; // placeholder value
 
 static char colorBg[]			 = "#282a36";
