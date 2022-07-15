@@ -32,49 +32,25 @@ static const int quit_empty_window_count = 0;   /* only allow dwm to quit if no 
 static const char *fonts[]               = { "Ubuntu Mono:size=10" };
 static const char dmenufont[]            = "Ubuntu Mono:size=10";
 
-static char c000000[]                    = "#000000"; // placeholder value
+static char colorNone[]                    = "#000000"; // placeholder value
 
-static char normfgcolor[]                = "#f8f8f2";
-static char normbgcolor[]                = "#282a36";
-static char normbordercolor[]            = "#44475a";
-static char normfloatcolor[]             = "#44475a";
+static char colorBg[]			 = "#282a36";
+static char colorFg[]			 = "#f8f8f2";
+static char colorPrimary[]		 = "#bd93f9";
+static char colorInactive[]		 = "#44475a";
 
-static char selfgcolor[]                 = "#f8f8f2";
-static char selbgcolor[]                 = "#282a36";
-static char selbordercolor[]             = "#bd93f9";
-static char selfloatcolor[]              = "#bd93f9";
-
-static char titlenormfgcolor[]           = "#f8f8f2";
-static char titlenormbgcolor[]           = "#282a36";
-static char titlenormbordercolor[]       = "#44475a";
-static char titlenormfloatcolor[]        = "#44475a";
-
-static char titleselfgcolor[]            = "#282a36";
-static char titleselbgcolor[]            = "#bd93f9";
-static char titleselbordercolor[]        = "#bd93f9";
-static char titleselfloatcolor[]         = "#bd93f9";
-
-static char tagsnormfgcolor[]            = "#f8f8f2";
-static char tagsnormbgcolor[]            = "#282a36";
-static char tagsnormbordercolor[]        = "#44475a";
-static char tagsnormfloatcolor[]         = "#44475a";
-
-static char tagsselfgcolor[]             = "#282a36";
-static char tagsselbgcolor[]             = "#bd93f9";
-static char tagsselbordercolor[]         = "#bd93f9";
-static char tagsselfloatcolor[]          = "#bd93f9";
-
-static char hidnormfgcolor[]             = "#005577";
-static char hidselfgcolor[]              = "#227799";
-static char hidnormbgcolor[]             = "#222222";
-static char hidselbgcolor[]              = "#222222";
-
-static char urgfgcolor[]                 = "#bbbbbb";
-static char urgbgcolor[]                 = "#222222";
-static char urgbordercolor[]             = "#ff0000";
-static char urgfloatcolor[]              = "#db8fd9";
-
-
+static char *colors[][ColCount] = {
+	/*                       fg                bg                border                float */
+	[SchemeNorm]         = { colorFg,      	   colorBg,          colorInactive,        colorInactive },
+	[SchemeSel]          = { colorBg,          colorPrimary,     colorPrimary,         colorPrimary },
+	[SchemeTitleNorm]    = { colorFg,          colorBg, 	     colorInactive,        colorInactive },
+	[SchemeTitleSel]     = { colorBg,          colorPrimary,     colorPrimary,         colorPrimary },
+	[SchemeTagsNorm]     = { colorFg,  	   colorBg,          colorInactive,        colorInactive },
+	[SchemeTagsSel]      = { colorBg,          colorPrimary,     colorPrimary,         colorPrimary },
+	[SchemeHidNorm]      = { colorFg,          colorBg,          colorNone,            colorNone },
+	[SchemeHidSel]       = { colorBg,          colorPrimary,     colorNone,            colorNone },
+	[SchemeUrg]          = { colorFg,          colorBg,          colorPrimary,         colorPrimary },
+};
 
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
@@ -90,23 +66,6 @@ static const unsigned int alphas[][3] = {
 	[SchemeHidSel]       = { OPAQUE, baralpha, borderalpha },
 	[SchemeUrg]          = { OPAQUE, baralpha, borderalpha },
 };
-
-static char *colors[][ColCount] = {
-	/*                       fg                bg                border                float */
-	[SchemeNorm]         = { normfgcolor,      normbgcolor,      normbordercolor,      normfloatcolor },
-	[SchemeSel]          = { selfgcolor,       selbgcolor,       selbordercolor,       selfloatcolor },
-	[SchemeTitleNorm]    = { titlenormfgcolor, titlenormbgcolor, titlenormbordercolor, titlenormfloatcolor },
-	[SchemeTitleSel]     = { titleselfgcolor,  titleselbgcolor,  titleselbordercolor,  titleselfloatcolor },
-	[SchemeTagsNorm]     = { tagsnormfgcolor,  tagsnormbgcolor,  tagsnormbordercolor,  tagsnormfloatcolor },
-	[SchemeTagsSel]      = { tagsselfgcolor,   tagsselbgcolor,   tagsselbordercolor,   tagsselfloatcolor },
-	[SchemeHidNorm]      = { hidnormfgcolor,   hidnormbgcolor,   c000000,              c000000 },
-	[SchemeHidSel]       = { hidselfgcolor,    hidselbgcolor,    c000000,              c000000 },
-	[SchemeUrg]          = { urgfgcolor,       urgbgcolor,       urgbordercolor,       urgfloatcolor },
-};
-
-
-
-
 
 /* Tags
  * In a traditional dwm the number of tags in use can be changed simply by changing the number
