@@ -26,4 +26,4 @@ compile "slock"
 # Save autostart
 mkdir -p ~/.local/share/dwm/
 cp -f dwm/autostart.sh ~/.local/share/dwm/
-cp -f bg.jpg ~/.local/share/dwm/
+cp -f bg.png ~/.local/share/dwm/

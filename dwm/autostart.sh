@@ -1,2 +1,2 @@
 slstatus &
-feh --bg-fill ~/.local/share/dwm/bg.jpg
+feh --bg-fill ~/.local/share/dwm/bg.png
