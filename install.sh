@@ -27,3 +27,17 @@ compile "slock"
 mkdir -p ~/.local/share/dwm/
 cp -f dwm/autostart.sh ~/.local/share/dwm/
 cp -f bg.png ~/.local/share/dwm/
+
+# GTK theme
+
+sudo pacman -S lxappearance
+
+sudo mkdir -p /usr/share/icons
+sudo cp -rf themes/Dracula /usr/share/icons
+
+sudo mkdir -p /usr/share/themes
+sudo cp -rf themes/dracula-gtk /usr/share/themes
+
+echo ---------------------------------------
+echo - Lauch LXappearance to change themes -
+echo ---------------------------------------

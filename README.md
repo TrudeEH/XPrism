@@ -5,6 +5,9 @@
 - [ ] Add a minimal browser (like surf)
 - [ ] Write the wiki
 - [ ] README.md
+- [ ] Install GTK theme automatically
+- [ ] Keybindings pop-up
+- [ ] Shutdown/Logout dmenu script
 
 ### DWM Patches
 - BAR_SYSTRAY_PATCH
