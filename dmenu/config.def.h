@@ -36,6 +36,7 @@ char *colors[][2] = {
 	[SchemeNormHighlight] = { "#ffc978", "#222222" },
 	[SchemeHp]   = { "#bbbbbb", "#333333" },
 };
+
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines      = 15;
 
