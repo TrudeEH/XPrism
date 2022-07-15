@@ -4,11 +4,11 @@ static const char *user  = "nobody";
 static const char *group = "nobody";
 
 static const char *colorname[NUMCOLS] = {
-	[INIT] =   "black",     /* after initialization */
-	[INPUT] =  "#005577",   /* during input */
-	[FAILED] = "#CC3333",   /* wrong password */
-	[CAPS] =   "red",       /* CapsLock on */
-	[BLOCKS] = "#ffffff",   /* key feedback block */
+	[INIT] =   "#282a36",   /* after initialization */
+	[INPUT] =  "#bd93f9",   /* during input */
+	[FAILED] = "#ff79c6",   /* wrong password */
+	[CAPS] =   "#ff5555",   /* CapsLock on */
+	[BLOCKS] = "#f8f8f2",   /* key feedback block */
 };
 
 
