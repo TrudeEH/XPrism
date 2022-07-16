@@ -1,5 +1,7 @@
 #! /bin/bash
 
+wallpaper="landscape.jpg"
+
 # DWM dependencies
 sudo pacman -S base-devel libx11 libxft libxinerama freetype2 fontconfig ttf-ubuntu-font-family
 
@@ -23,10 +25,12 @@ compile "st"
 compile "dmenu"
 compile "slock"
 
-# Save autostart
+# Autostart + Wallpaper
 mkdir -p ~/.local/share/dwm/
 cp -f dwm/autostart.sh ~/.local/share/dwm/
-cp -f bg.png ~/.local/share/dwm/
+cp -f wallpapers/$wallpaper ~/.local/share/dwm/
+echo "feh --bg-fill ~/.local/share/dwm/$wallpaper" >> ~/.local/share/dwm/autostart.sh
+feh --bg-fill ~/.local/share/dwm/$wallpaper
 
 # GTK theme
 
