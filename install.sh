@@ -57,3 +57,5 @@ sudo pacman -S volumeicon
 
 # Picom
 sudo pacman -S picom
+mkdir -p ~/.config/picom
+cp -f picom.conf ~/.config/picom
