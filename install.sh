@@ -41,3 +41,19 @@ sudo cp -rf themes/dracula-gtk /usr/share/themes
 echo ---------------------------------------
 echo - Lauch LXappearance to change themes -
 echo ---------------------------------------
+
+# LXsession
+sudo pacman -S lxsession
+
+# Network Manager
+sudo pacman -S wpa_supplicant wireless_tools networkmanager network-manager-applet
+sudo systemctl enable NetworkManager.service
+sudo systemctl disable dhcpcd.service
+sudo systemctl enable wpa_supplicant.service
+sudo systemctl start NetworkManager.service
+
+# Volume Icon
+sudo pacman -S volumeicon
+
+# Picom
+sudo pacman -S picom
