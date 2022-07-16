@@ -1,6 +1,6 @@
 #! /bin/bash
 
-wallpaper="landscape.jpg"
+wallpaper="dracula_arch.png"
 
 # DWM dependencies
 sudo pacman -S base-devel libx11 libxft libxinerama freetype2 fontconfig ttf-ubuntu-font-family
@@ -63,3 +63,10 @@ sudo pacman -S volumeicon
 sudo pacman -S picom
 mkdir -p ~/.config/picom
 cp -f picom.conf ~/.config/picom
+
+# Dunst
+sudo pacman -S dunst
+mkdir -p ~/.config/dunst
+cp -f dunstrc ~/.config/dunst
+
+notify-send "TruDE" "TruDE has finished installing"
