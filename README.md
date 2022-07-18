@@ -8,6 +8,7 @@
 - [ ] Install GTK theme automatically
 - [ ] Keybindings pop-up
 - [ ] Shutdown/Logout dmenu script
+- [ ] Volumeicon config
 
 ### DWM Patches
 - BAR_SYSTRAY_PATCH
