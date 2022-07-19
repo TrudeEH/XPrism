@@ -21,7 +21,7 @@ static const int sidepad                 = 0;  /* horizontal padding of bar */
 static const int statusmon               = -1;
 static const int horizpadbar             = 2;   /* horizontal padding for statusbar */
 static const int vertpadbar              = 5;   /* vertical padding for statusbar */
-static const unsigned int systrayspacing = 2;   /* systray spacing */
+static const unsigned int systrayspacing = 1;   /* systray spacing */
 static const int showsystray             = 1;   /* 0 means no systray */
 
 /* Indicators: see patch/bar_indicators.h for options */
@@ -30,8 +30,7 @@ static int tiledindicatortype            = INDICATOR_NONE;
 static int floatindicatortype            = INDICATOR_TOP_LEFT_SQUARE;
 static const int quit_empty_window_count = 0;   /* only allow dwm to quit if no (<= count) windows are open */
 static const char *fonts[]               = { "Ubuntu Mono:size=10" };
-static char colorNone[]                    = "#000000"; // placeholder value
-
+static char colorNone[]                  = "#000000"; // placeholder value
 static char colorBg[]			 = "#282a36";
 static char colorFg[]			 = "#f8f8f2";
 static char colorPrimary[]		 = "#bd93f9";
