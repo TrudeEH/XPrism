@@ -3,7 +3,7 @@
 wallpaper="dracula_arch.png"
 
 # DWM dependencies
-sudo pacman -S base-devel libx11 libxft libxinerama freetype2 fontconfig ttf-ubuntu-font-family
+sudo pacman -S base-devel libx11 libxft libxinerama freetype2 fontconfig ttf-ubuntu-font-family ttf-font-awesome
 
 # Wallpaper dependencies
 sudo pacman -S feh
