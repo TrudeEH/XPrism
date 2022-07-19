@@ -1,6 +1,6 @@
 start () {
    ps aux | grep $1 | grep -v grep &> /dev/null
-   if [ $? == 1 ] then
+   if [ $? == 1 ]; then
       $1 &
    fi
 }
