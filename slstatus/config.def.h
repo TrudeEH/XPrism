@@ -69,7 +69,6 @@ static const struct arg args[] = {
 	{ battery_state, "%s | ",    "BATT"  },
 	{ ram_perc, "RAM: %s%% | ",    NULL    },
 	{ cpu_perc, "CPU: %s%% | ",    NULL    },
-	{ netspeed_rx, "%sB/s | ",   "wlan0" },
         { datetime, "%s",           "%F %T" },
 
 };

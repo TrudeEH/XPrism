@@ -65,7 +65,7 @@ mkdir -p ~/.config/picom
 cp -f picom.conf ~/.config/picom
 
 # Dunst
-sudo pacman -S dunst
+sudo pacman -S dunst libnotify
 mkdir -p ~/.config/dunst
 cp -f dunstrc ~/.config/dunst
 
