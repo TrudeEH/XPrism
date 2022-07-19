@@ -1,11 +1,13 @@
-lxsession &
-slstatus &
-picom --experimental-backend -b &
-nm-applet &
+start () {
+   ps aux | grep $1 | grep -v grep &> /dev/null
+   if [ $? == 1 ] then
+      $1 &
+   fi
+}
 
-ps aux | grep volumeicon | grep -v grep &> /dev/null
-if [ $? == 1 ] then
-	volumeicon &
-fi
-
-dunst &
+start "lxsession"
+start "picom --experimental-backend -b"
+start "nm-applet"
+start "slstatus"
+start "volumeicon"
+start "dunst"
