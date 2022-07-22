@@ -2,8 +2,17 @@
 
 wallpaper="dracula_arch.png"
 
+# Update
+sudo pacman -Sy
+
+# Xorg
+sudo pacman -S xorg-server
+
 # DWM dependencies
 sudo pacman -S base-devel libx11 libxft libxinerama freetype2 fontconfig ttf-ubuntu-font-family ttf-font-awesome
+
+# Slock dependencies
+sudo pacman -S xorg-xrandr
 
 # Wallpaper dependencies
 sudo pacman -S feh
@@ -69,4 +78,3 @@ sudo pacman -S dunst libnotify
 mkdir -p ~/.config/dunst
 cp -f dunstrc ~/.config/dunst
 
-notify-send "TruDE" "TruDE has finished installing"
