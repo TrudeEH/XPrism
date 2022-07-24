@@ -1,80 +1,106 @@
 #! /bin/bash
 
-wallpaper="dracula_arch.png"
+echo " _______         _____  ______  "
+echo "|__   __|       |  __ \|  ____| "
+echo "   | |_ __ _   _| |  | | |__    "
+echo "   | | '__| | | | |  | |  __|   "
+echo "   | | |  | |_| | |__| | |____  "
+echo "   |_|_|   \__,_|_____/|______| "
+echo
+echo "Press ENTER to proceed or X to abort"
 
-# Update
-sudo pacman -Sy
+read -p ">> " choice
 
-# Xorg
-sudo pacman -S xorg-server
+if [ $choice == "x" ] ; then
+	exit 0
+fi
 
-# DWM dependencies
-sudo pacman -S base-devel libx11 libxft libxinerama freetype2 fontconfig ttf-ubuntu-font-family ttf-font-awesome
-
-# Slock dependencies
-sudo pacman -S xorg-xrandr
-
-# Wallpaper dependencies
-sudo pacman -S feh
-
-# -------------------------------------------
-# Compile
-
-compile () {
-  cd $1
-  make
-  sudo make clean install
-  rm -f $1 *.o */*.o config.h stest
-  cd ..
+deInstall() {
+	sudo pacman -S xorg-server base-devel libx11 libxft libxinerama freetype2 fontconfig ttf-ubuntu-font-family ttf-font-awesome --noconfirm
+	compile "dwm"
+	compile "slstatus"
+	compile "st"
+	compile "dmenu"
+	sudo pacman -S xorg-xrandr --noconfirm # Slock dependencies
+	compile "slock"
 }
 
-compile "dwm"
-compile "slstatus"
-compile "st"
-compile "dmenu"
-compile "slock"
+compile () {
+	cd $1
+	make
+	sudo make clean install
+	rm -f $1 *.o */*.o config.h stest
+	cd ..
+}
 
-# Autostart + Wallpaper
-mkdir -p ~/.local/share/dwm/
-cp -f dwm/autostart.sh ~/.local/share/dwm/
-cp -f wallpapers/$wallpaper ~/.local/share/dwm/
-echo "feh --bg-fill ~/.local/share/dwm/$wallpaper" >> ~/.local/share/dwm/autostart.sh
-feh --bg-fill ~/.local/share/dwm/$wallpaper
+gtkTheme () {
+	sudo pacman -S lxappearance --noconfirm
 
-# GTK theme
+	sudo mkdir -p /usr/share/icons
+	sudo cp -rf themes/Dracula /usr/share/icons
 
-sudo pacman -S lxappearance
+	sudo mkdir -p /usr/share/themes
+	sudo cp -rf themes/dracula-gtk /usr/share/themes
 
-sudo mkdir -p /usr/share/icons
-sudo cp -rf themes/Dracula /usr/share/icons
+	echo ---------------------------------------
+	echo - Lauch LXappearance to change themes -
+	echo ---------------------------------------
+}
 
-sudo mkdir -p /usr/share/themes
-sudo cp -rf themes/dracula-gtk /usr/share/themes
+networkManager () {
+	sudo pacman -S wpa_supplicant wireless_tools networkmanager network-manager-applet --noconfirm
+	sudo systemctl enable NetworkManager.service
+	sudo systemctl disable dhcpcd.service
+	sudo systemctl enable wpa_supplicant.service
+	sudo systemctl start NetworkManager.service
+}
 
-echo ---------------------------------------
-echo - Lauch LXappearance to change themes -
-echo ---------------------------------------
+picomInstall () {
+	sudo pacman -S picom
+	mkdir -p ~/.config/picom
+	cp -f picom.conf ~/.config/picom
+}
 
-# LXsession
-sudo pacman -S lxsession
+dunstInstall () {
+	sudo pacman -S dunst libnotify
+	mkdir -p ~/.config/dunst
+	cp -f dunstrc ~/.config/dunst
+}
 
-# Network Manager
-sudo pacman -S wpa_supplicant wireless_tools networkmanager network-manager-applet
-sudo systemctl enable NetworkManager.service
-sudo systemctl disable dhcpcd.service
-sudo systemctl enable wpa_supplicant.service
-sudo systemctl start NetworkManager.service
+wallpaperSelect() {
+	# Dependencies
+	sudo pacman -S feh --noconfirm
 
-# Volume Icon
-sudo pacman -S volumeicon
+	# Choose the wallpaper
+	clear
+	echo "Select your wallpaper:"
+	echo
+	echo "[+] Listing wallpapers in TruDE/wallpapers."
+	echo "[i] Press X to use the default wallpaper."
+	echo
+	ls wallpapers
+	echo
+	read -p "File name: " wallpaper
+	if [ $wallpaper == "x" ] ; then
+		wallpaper="dracula_arch.png"
+	fi
+	
+	# Autostart + Wallpaper
+	mkdir -p ~/.local/share/dwm/
+	cp -f dwm/autostart.sh ~/.local/share/dwm/
+	cp -f wallpapers/$wallpaper ~/.local/share/dwm/
+	echo "feh --bg-fill ~/.local/share/dwm/$wallpaper" >> ~/.local/share/dwm/autostart.sh
+	feh --bg-fill ~/.local/share/dwm/$wallpaper
+}
 
-# Picom
-sudo pacman -S picom
-mkdir -p ~/.config/picom
-cp -f picom.conf ~/.config/picom
+# -------------------------------------------
 
-# Dunst
-sudo pacman -S dunst libnotify
-mkdir -p ~/.config/dunst
-cp -f dunstrc ~/.config/dunst
+sudo pacman -Sy # Update
+sudo pacman -S lxsession volumeicon --noconfirm
 
+deInstall
+gtkTheme
+networkManager
+picomInstall
+dunstInstall
+wallpaperSelect
