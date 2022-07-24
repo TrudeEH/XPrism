@@ -56,13 +56,13 @@ networkManager () {
 }
 
 picomInstall () {
-	sudo pacman -S picom
+	sudo pacman -S picom --noconfirm
 	mkdir -p ~/.config/picom
 	cp -f picom.conf ~/.config/picom
 }
 
 dunstInstall () {
-	sudo pacman -S dunst libnotify
+	sudo pacman -S dunst libnotify --noconfirm
 	mkdir -p ~/.config/dunst
 	cp -f dunstrc ~/.config/dunst
 }
