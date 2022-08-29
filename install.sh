@@ -93,6 +93,23 @@ wallpaperSelect() {
 	feh --bg-fill ~/.local/share/dwm/$wallpaper
 }
 
+installYay() {
+	sudo git clone https://aur.archlinux.org/yay-git.git
+	cd yay-git
+	makepkg -si
+	cd ..
+	sudo rm -rf yay-git
+	yay -Sy
+}
+
+autoCpuFreq() {
+	# Battery optimization
+	git clone https://github.com/AdnanHodzic/auto-cpufreq.git
+	cd auto-cpufreq && sudo ./auto-cpufreq-installer
+	cd .. && sudo rm -rf auto-cpufreq
+	sudo auto-cpufreq --install
+}
+
 # -------------------------------------------
 
 sudo pacman -Sy # Update
@@ -104,3 +121,5 @@ networkManager
 picomInstall
 dunstInstall
 wallpaperSelect
+installYay
+autoCpuFreq
