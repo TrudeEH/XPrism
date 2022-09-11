@@ -9,6 +9,7 @@
 - [ ] Keybindings pop-up
 - [ ] Shutdown/Logout dmenu script
 - [ ] Volumeicon config
+- [ ] Add an external script to install an AUR helper, a GTK theme, and wallpaper selector (settings?)
 
 ### DWM Patches
 - BAR_SYSTRAY_PATCH
