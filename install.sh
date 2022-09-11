@@ -33,20 +33,6 @@ compile () {
 	cd ..
 }
 
-gtkTheme () {
-	sudo pacman -S lxappearance --noconfirm
-
-	sudo mkdir -p /usr/share/icons
-	sudo cp -rf themes/Dracula /usr/share/icons
-
-	sudo mkdir -p /usr/share/themes
-	sudo cp -rf themes/dracula-gtk /usr/share/themes
-
-	echo ---------------------------------------
-	echo - Lauch LXappearance to change themes -
-	echo ---------------------------------------
-}
-
 networkManager () {
 	sudo pacman -S wpa_supplicant wireless_tools networkmanager network-manager-applet --noconfirm
 	sudo systemctl enable NetworkManager.service
@@ -67,41 +53,6 @@ dunstInstall () {
 	cp -f dunstrc ~/.config/dunst
 }
 
-wallpaperSelect() {
-	# Dependencies
-	sudo pacman -S feh --noconfirm
-
-	# Choose the wallpaper
-	clear
-	echo "Select your wallpaper:"
-	echo
-	echo "[+] Listing wallpapers in TruDE/wallpapers."
-	echo "[i] Press X to use the default wallpaper."
-	echo
-	ls wallpapers
-	echo
-	read -p "File name: " wallpaper
-	if [ $wallpaper == "x" ] ; then
-		wallpaper="dracula_arch.png"
-	fi
-	
-	# Autostart + Wallpaper
-	mkdir -p ~/.local/share/dwm/
-	cp -f dwm/autostart.sh ~/.local/share/dwm/
-	cp -f wallpapers/$wallpaper ~/.local/share/dwm/
-	echo "feh --bg-fill ~/.local/share/dwm/$wallpaper" >> ~/.local/share/dwm/autostart.sh
-	feh --bg-fill ~/.local/share/dwm/$wallpaper
-}
-
-installYay() {
-	sudo git clone https://aur.archlinux.org/yay-git.git
-	cd yay-git
-	makepkg -si
-	cd ..
-	sudo rm -rf yay-git
-	yay -Sy
-}
-
 autoCpuFreq() {
 	# Battery optimization
 	git clone https://github.com/AdnanHodzic/auto-cpufreq.git
@@ -110,16 +61,20 @@ autoCpuFreq() {
 	sudo auto-cpufreq --install
 }
 
+# Autostart + Wallpaper
+mkdir -p ~/.local/share/dwm/
+cp -f dwm/autostart.sh ~/.local/share/dwm/
+cp -f wallpaper.png ~/.local/share/dwm/
+
+
+
 # -------------------------------------------
 
 sudo pacman -Sy # Update
 sudo pacman -S lxsession volumeicon --noconfirm
 
 deInstall
-gtkTheme
 networkManager
 picomInstall
 dunstInstall
-wallpaperSelect
-installYay
 autoCpuFreq

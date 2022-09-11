@@ -11,3 +11,5 @@ start "nm-applet"
 start "slstatus"
 start "volumeicon"
 start "dunst"
+
+feh --bg-fill ~/.local/share/dwm/wallpaper.png
