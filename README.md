@@ -1,6 +1,6 @@
 # Trude's Desktop Environment (TruDE)
 
-[![license](https://img.shields.io/badge/license-GPL-brightgreen.svg)](https://github.com/TrudeEH/TruDE/LICENSE)
+[![license](https://img.shields.io/badge/license-GPL-brightgreen.svg)](https://github.com/TrudeEH/TruDE/blob/main/LICENSE)
 
 TruDE is an open source desktop environment for Linux, designed to be extremely lightweight and customizable.
 Instead of floating windows, TruDE tiles windows automatically. 
