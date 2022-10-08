@@ -7,6 +7,8 @@ Instead of floating windows, TruDE tiles windows automatically.
 This allows for the DE to be operated exclusively with a keyboard.
 TruDE supports any device capable of running Linux, including arm and 32bit processors. This makes it great for servers, that may have limited resources for the OS.
 
+![Screenshot](https://github.com/TrudeEH/TruDE/blob/main/screenshot.png)
+
 *This repository is under heavy maintenance. Documentation and build details will be updated later on. Do NOT use this branch on critical infrastructure, as it is still unstable and subject to change.*
 
 ## Dev Notes
