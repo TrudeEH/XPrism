@@ -15,4 +15,4 @@ nm-applet &
 slstatus &
 dunst &
 
-#feh --bg-fill ~/.local/share/dwm/wallpaper.png
+feh --bg-fill ~/.local/share/dwm/wallpaper.png
