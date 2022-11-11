@@ -22,12 +22,13 @@ if [ $choice == "1" ] ; then
 	sudo apt install -y compton
 	sudo apt install -y network-manager-gnome
 	sudo apt install -y dunst
+	sudo apt install -y fonts-font-awesome
 
 elif [ $choice == "2" ] ; then
 	sudo pacman -Sy
 	sudo pacman -S xorg-server base-devel libx11 libxft libxinerama freetype2 fontconfig ttf-font-awesome --noconfirm
 	sudo pacman -S picom --no-confirm
-    sudo pacman -S wpa_supplicant wireless_tools networkmanager network-manager-applet --noconfirm
+        sudo pacman -S wpa_supplicant wireless_tools networkmanager network-manager-applet --noconfirm
 	sudo pacman -S dunst libnotify --noconfirm
 fi
 
