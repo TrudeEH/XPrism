@@ -17,11 +17,8 @@ TruDE supports any device capable of running Linux, including arm and 32bit proc
 - [ ] Add a minimal browser (like surf)
 - [ ] Write the wiki
 - [ ] README.md
-- [ ] Install GTK theme automatically
 - [ ] Keybindings pop-up
 - [ ] Shutdown/Logout dmenu script
-- [ ] Volumeicon config
-- [ ] Add an external script to install an AUR helper, a GTK theme, and wallpaper selector (settings?)
 
 ### DWM Patches
 - BAR_SYSTRAY_PATCH
