@@ -1,15 +1,18 @@
-start () {
-   ps aux | grep $1 | grep -v grep &> /dev/null
-   if [ $? == 1 ]; then
-      $1 &
-   fi
-}
+#start () {
+#   ps aux | grep $1 | grep -v grep #&> /dev/null
+#   if [ $? == 1 ]; then
+#      $1 &
+#   fi
+#}
 
-start "lxsession"
-start "picom --experimental-backend -b"
-start "nm-applet"
-start "slstatus"
-start "volumeicon"
-start "dunst"
+#start "picom --experimental-backend -b"
+#start "nm-applet"
+#start "slstatus"
+#start "dunst"
 
-feh --bg-fill ~/.local/share/dwm/wallpaper.png
+picom --experimental-backend -b &
+nm-applet &
+slstatus &
+dunst &
+
+#feh --bg-fill ~/.local/share/dwm/wallpaper.png
