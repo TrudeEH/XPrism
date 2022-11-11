@@ -1,5 +1,6 @@
 #! /bin/bash
 
+clear
 echo " _______         _____  ______  "
 echo "|__   __|       |  __ \|  ____| "
 echo "   | |_ __ _   _| |  | | |__    "
@@ -7,15 +8,7 @@ echo "   | | '__| | | | |  | |  __|   "
 echo "   | | |  | |_| | |__| | |____  "
 echo "   |_|_|   \__,_|_____/|______| "
 echo
-echo "Press ENTER to proceed or X to abort"
-
-read -p ">> " choice
-
-if [ $choice == "x" ] ; then
-	exit 0
-fi
-
-clear
+echo
 echo "Select your Linux distro"
 echo "1 - Debian"
 echo "2 - Arch"
@@ -28,12 +21,14 @@ if [ $choice == "1" ] ; then
 	sudo apt install -y make gcc libx11-dev libxft-dev libxinerama-dev xorg libfreetype6-dev libfontconfig1-dev xorg-dev
 	sudo apt install -y compton
 	sudo apt install -y network-manager-gnome
+	sudo apt install -y dunst
 
 elif [ $choice == "2" ] ; then
 	sudo pacman -Sy
 	sudo pacman -S xorg-server base-devel libx11 libxft libxinerama freetype2 fontconfig ttf-font-awesome --noconfirm
 	sudo pacman -S picom --no-confirm
-        sudo pacman -S wpa_supplicant wireless_tools networkmanager network-manager-applet --noconfirm
+    sudo pacman -S wpa_supplicant wireless_tools networkmanager network-manager-applet --noconfirm
+	sudo pacman -S dunst libnotify --noconfirm
 fi
 
 compile () {
@@ -65,7 +60,6 @@ cp -f picom.conf ~/.config/picom
 
 
 # Install dunst
-sudo pacman -S dunst libnotify --noconfirm
 mkdir -p ~/.config/dunst
 cp -f dunstrc ~/.config/dunst
 
