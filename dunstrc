@@ -20,6 +20,8 @@
     follow = mouse
 
     ### Geometry ###
+	
+    geometry = "300x0-10+30"
 
     # dynamic width from 0 to 300
     # width = (0, 300)
@@ -33,13 +35,13 @@
     origin = top-right
 
     # Offset from the origin
-    offset = 10x50
+    offset = 10x30
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
 
     # Maximum number of notification (0 means no limit)
-    notification_limit = 0
+    notification_limit = 6
 
     ### Progress bar ###
 
@@ -73,7 +75,7 @@
     # Draw a line of "separator_height" pixel height between two
     # notifications.
     # Set to 0 to disable.
-    separator_height = 1
+    separator_height = 2
 
     # Padding between text and separator.
     padding = 8
@@ -86,7 +88,7 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 1
+    frame_width = 2
 
     # Defines color of the frame around the notification window.
     frame_color = "#bd93f9"

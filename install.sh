@@ -63,7 +63,7 @@ cp -f picom.conf ~/.config/picom
 
 # Install dunst
 mkdir -p ~/.config/dunst
-cp -f dunstrc ~/.config/dunst
+cp -f dunstrc ~/.config/dunst/dunstrc
 
 
 # Autostart + Wallpaper
