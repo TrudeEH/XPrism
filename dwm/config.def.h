@@ -5,19 +5,19 @@
 #include "../config.h"
 
 /* appearance */
-static const unsigned int borderpx       = 2;   /* border pixel of windows */
+static const unsigned int borderpx       = borderSize;   /* border pixel of windows */
 static const unsigned int snap           = 32;  /* snap pixel */
-static const unsigned int gappih         = 5;  /* horiz inner gap between windows */
-static const unsigned int gappiv         = 5;  /* vert inner gap between windows */
-static const unsigned int gappoh         = 5;  /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov         = 5;  /* vert outer gap between windows and screen edge */
+static const unsigned int gappih         = gapSizeWindow;  /* horiz inner gap between windows */
+static const unsigned int gappiv         = gapSizeWindow;  /* vert inner gap between windows */
+static const unsigned int gappoh         = gapSizeScreen;  /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov         = gapSizeScreen;  /* vert outer gap between windows and screen edge */
 static const int smartgaps_fact          = 1;   /* gap factor when there is only one client; 0 = no gaps, 3 = 3x outer gaps */
 static const char autostartblocksh[]     = "autostart_blocking.sh";
 static const char autostartsh[]          = "autostart.sh";
 static const char dwmdir[]               = "dwm";
 static const char localshare[]           = ".local/share";
-static const int showbar                 = 1;   /* 0 means no bar */
-static const int topbar                  = 1;   /* 0 means bottom bar */
+static const int showbar                 = barToggle;   /* 0 means no bar */
+static const int topbar                  = barTop;   /* 0 means bottom bar */
 static const int bar_height              = 0;   /* 0 means derive from font, >= 1 explicit height */
 static const int vertpad                 = 0;  /* vertical padding of bar */
 static const int sidepad                 = 0;  /* horizontal padding of bar */
@@ -41,7 +41,7 @@ static char *colors[][ColCount] = {
    /*                     fg          bg         border          float */
    [SchemeNorm]       = { normalFg,  normalBg,   normalBorder,   normalFloatingBorder },
    [SchemeSel]        = { selFg,     selBg,      selBorder,      selFloatingBorder },
-   [SchemeTitleNorm]  = { titleFg,   titleBg, 	titleBorder,    titleFloatingBorder },
+   [SchemeTitleNorm]  = { titleFg,   titleBg,    titleBorder,    titleFloatingBorder },
    [SchemeTitleSel]   = { tselFg,    tselBg,     tselBorder,     tselFloatingBorder },
    [SchemeTagsNorm]   = { tagsFg,    tagsBg,     tagsBorder,     tagsFloatingBorder },
    [SchemeTagsSel]    = { tagSelFg,  tagSelBg,   tagSelBorder,   tagSelFloatingBorder },
@@ -170,8 +170,8 @@ static const int scrollargs[][2] = {
 	/* width change         height change */
 	{ +scrollsensetivity,	0 },
 	{ -scrollsensetivity,	0 },
-	{ 0, 				  	+scrollsensetivity },
-	{ 0, 					-scrollsensetivity },
+	{ 0, 		        +scrollsensetivity },
+	{ 0, 			-scrollsensetivity },
 };
 
 static const Layout layouts[] = {
@@ -197,9 +197,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", NULL };
-
 static const char *termcmd[]  = { "st", NULL };
-
 static const char *slock[] = { "slock", NULL };
 
 static Key keys[] = {
