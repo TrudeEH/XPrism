@@ -1,8 +1,11 @@
-/*
-    Global config file
-*/
+/*********************************************************************
+ *                           Global settings                         *
+ *                               TruDE                               *
+ *********************************************************************/
 
-/* Global appearance */
+/*********************************************************************
+ *                           Appearance                              *
+ *********************************************************************/
 
 #include "themes/dracula.h"
 
@@ -18,10 +21,14 @@
 #define barToggle       1     /* 1 - Show the bar; 0 - Hide the bar */
 
 
-/* ADVANCED CONFIGURATION */
+/*********************************************************************
+ *                       ADVANCED CONFIGURATION                      *
+ *                        Proceed with caution                       *
+ *********************************************************************/
 
 /* DWM Appearance */
 
+/* Colors */
 /* Normal */
 #define normalFg colorFg
 #define normalBg colorBg
