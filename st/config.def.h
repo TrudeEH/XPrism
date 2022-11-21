@@ -5,11 +5,11 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
+
+#include "../config.h"
+
 static char *font = "monospace:pixelsize=14:antialias=true:autohint=true";
-
-
 static int borderpx = 2;
-
 static char *url_opener = "xdg-open";
 
 /*
@@ -105,30 +105,30 @@ float alpha = 0.8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	[0] = "#000000", /* black   */
-	[1] = "#ff5555", /* red     */
-	[2] = "#50fa7b", /* green   */
-	[3] = "#f1fa8c", /* yellow  */
-	[4] = "#bd93f9", /* blue    */
-	[5] = "#ff79c6", /* magenta */
-	[6] = "#8be9fd", /* cyan    */
-	[7] = "#bbbbbb", /* white   */
-	
+	[0] = black,
+	[1] = red,
+	[2] = green,
+	[3] = yellow,
+	[4] = blue,
+	[5] = pink,
+	[6] = cyan,
+	[7] = white,
+
 	/* 8 bright colors */
-	[8]  = "#44475a", /* black   */
-	[9]  = "#ff5555", /* red     */
-	[10] = "#50fa7b", /* green   */
-	[11] = "#f1fa8c", /* yellow  */
-	[12] = "#bd93f9", /* blue    */
-	[13] = "#ff79c6", /* magenta */
-	[14] = "#8be9fd", /* cyan    */
-	[15] = "#ffffff", /* white   */
+	[8]  = gray3,
+	[9]  = red,
+	[10] = green,
+	[11] = yellow,
+	[12] = blue,
+	[13] = pink,
+	[14] = cyan,
+	[15] = white,
 
 	[255] = 0,
 
 	/* special colors */
-	[256] = "#282a36", /* background */
-	[257] = "#f8f8f2", /* foreground */
+	[256] = gray2, /* background */
+	[257] = white, /* foreground */
 };
 
 

@@ -1,14 +1,16 @@
+#include "../config.h"
+
 /* user and group to drop privileges to */
 static const char *user  = "nobody";
 // static const char *group = "nogroup"; // use "nobody" for arch
 static const char *group = "nogroup";
 
 static const char *colorname[NUMCOLS] = {
-	[INIT] =   "#282a36",   /* after initialization */
-	[INPUT] =  "#bd93f9",   /* during input */
-	[FAILED] = "#ff79c6",   /* wrong password */
-	[CAPS] =   "#ff5555",   /* CapsLock on */
-	[BLOCKS] = "#f8f8f2",   /* key feedback block */
+	[INIT] =   gray2,   /* after initialization */
+	[INPUT] =  blue,   /* during input */
+	[FAILED] = pink,   /* wrong password */
+	[CAPS] =   red,   /* CapsLock on */
+	[BLOCKS] = white,   /* key feedback block */
 };
 
 

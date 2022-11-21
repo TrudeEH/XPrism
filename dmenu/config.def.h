@@ -1,3 +1,5 @@
+#include "../config.h"
+
 /* See LICENSE file for copyright and license details. */
 /* Default settings; can be overriden by command line. */
 
@@ -24,9 +26,11 @@ static const unsigned int alphas[][3]      = {
 	[SchemeHp] = { OPAQUE, baralpha, borderalpha },
 };
 
+/*
 static char colorBg[]			 = "#282a36";
 static char colorFg[]			 = "#f8f8f2";
 static char colorPrimary[]		 = "#bd93f9";
+*/
 
 static const char *colors[][2] = {
 	/*                          fg         bg       */

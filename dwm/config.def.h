@@ -1,5 +1,9 @@
 /* See LICENSE file for copyright and license details. */
 
+/* Global config file */
+
+#include "../config.h"
+
 /* appearance */
 static const unsigned int borderpx       = 2;   /* border pixel of windows */
 static const unsigned int snap           = 32;  /* snap pixel */
@@ -29,24 +33,21 @@ static int tagindicatortype              = INDICATOR_TOP_LEFT_SQUARE;
 static int tiledindicatortype            = INDICATOR_NONE;
 static int floatindicatortype            = INDICATOR_TOP_LEFT_SQUARE;
 static const int quit_empty_window_count = 0;   /* only allow dwm to quit if no (<= count) windows are open */
-static const char *fonts[]               = { "monospace:size=10" };
-static char colorNone[]                  = "#000000"; // placeholder value
-static char colorBg[]			 = "#282a36";
-static char colorFg[]			 = "#f8f8f2";
-static char colorPrimary[]		 = "#bd93f9";
-static char colorInactive[]		 = "#44475a";
 
+static const char *fonts[]               = { "monospace:size=10" };
+
+static char colorNone[]                  = "#000000"; // placeholder value
 static char *colors[][ColCount] = {
-	/*                       fg                bg                border                float */
-	[SchemeNorm]         = { colorFg,      	   colorBg,          colorInactive,        colorInactive },
-	[SchemeSel]          = { colorBg,          colorPrimary,     colorPrimary,         colorPrimary },
-	[SchemeTitleNorm]    = { colorFg,          colorBg, 	     colorInactive,        colorInactive },
-	[SchemeTitleSel]     = { colorBg,          colorPrimary,     colorPrimary,         colorPrimary },
-	[SchemeTagsNorm]     = { colorFg,  	   colorBg,          colorInactive,        colorInactive },
-	[SchemeTagsSel]      = { colorBg,          colorPrimary,     colorPrimary,         colorPrimary },
-	[SchemeHidNorm]      = { colorFg,          colorBg,          colorNone,            colorNone },
-	[SchemeHidSel]       = { colorBg,          colorPrimary,     colorNone,            colorNone },
-	[SchemeUrg]          = { colorFg,          colorBg,          colorPrimary,         colorPrimary },
+   /*                     fg          bg         border          float */
+   [SchemeNorm]       = { normalFg,  normalBg,   normalBorder,   normalFloatingBorder },
+   [SchemeSel]        = { selFg,     selBg,      selBorder,      selFloatingBorder },
+   [SchemeTitleNorm]  = { titleFg,   titleBg, 	titleBorder,    titleFloatingBorder },
+   [SchemeTitleSel]   = { tselFg,    tselBg,     tselBorder,     tselFloatingBorder },
+   [SchemeTagsNorm]   = { tagsFg,    tagsBg,     tagsBorder,     tagsFloatingBorder },
+   [SchemeTagsSel]    = { tagSelFg,  tagSelBg,   tagSelBorder,   tagSelFloatingBorder },
+   [SchemeHidNorm]    = { hidFg,     hidBg,      colorNone,      colorNone },
+   [SchemeHidSel]     = { hidSelFg,  hidSelBg,   colorNone,      colorNone },
+   [SchemeUrg]        = { urgFg,     urgBg,      urgBorder,      urgFloatingBorder },
 };
 
 static const unsigned int baralpha = 0xd0;

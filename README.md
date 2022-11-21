@@ -20,6 +20,8 @@ TruDE supports any device capable of running Linux, including arm and 32bit proc
 - [ ] Keybindings pop-up
 - [ ] Shutdown/Logout dmenu script
 
+- [ ] Add every config option to the global config.h
+
 ### DWM Patches
 - BAR_SYSTRAY_PATCH
 - BAR_HEIGHT_PATCH
