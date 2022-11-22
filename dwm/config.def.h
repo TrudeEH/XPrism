@@ -18,15 +18,15 @@ static const char dwmdir[]               = "dwm";
 static const char localshare[]           = ".local/share";
 static const int showbar                 = barToggle;   /* 0 means no bar */
 static const int topbar                  = barTop;   /* 0 means bottom bar */
-static const int bar_height              = 0;   /* 0 means derive from font, >= 1 explicit height */
-static const int vertpad                 = 0;  /* vertical padding of bar */
-static const int sidepad                 = 0;  /* horizontal padding of bar */
+static const int bar_height              = barHeight;   /* 0 means derive from font, >= 1 explicit height */
+static const int vertpad                 = barGap;  /* vertical padding of bar */
+static const int sidepad                 = barGap;  /* horizontal padding of bar */
 /* Status is to be shown on: -1 (all monitors), 0 (a specific monitor by index), 'A' (active monitor) */
 static const int statusmon               = -1;
 static const int horizpadbar             = 2;   /* horizontal padding for statusbar */
 static const int vertpadbar              = 5;   /* vertical padding for statusbar */
 static const unsigned int systrayspacing = 1;   /* systray spacing */
-static const int showsystray             = 1;   /* 0 means no systray */
+static const int showsystray             = barTray;   /* 0 means no systray */
 
 /* Indicators: see patch/bar_indicators.h for options */
 static int tagindicatortype              = INDICATOR_TOP_LEFT_SQUARE;
@@ -50,8 +50,8 @@ static char *colors[][ColCount] = {
    [SchemeUrg]        = { urgFg,     urgBg,      urgBorder,      urgFloatingBorder },
 };
 
-static const unsigned int baralpha = 0xd0;
-static const unsigned int borderalpha = OPAQUE;
+static const unsigned int baralpha = barAlpha;
+static const unsigned int borderalpha = borderAlpha;
 static const unsigned int alphas[][3] = {
 	/*                       fg      bg        border     */
 	[SchemeNorm]         = { OPAQUE, baralpha, borderalpha },
