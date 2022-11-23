@@ -1,18 +1,22 @@
-#start () {
-#   ps aux | grep $1 | grep -v grep #&> /dev/null
-#   if [ $? == 1 ]; then
-#      $1 &
-#   fi
-#}
+start() {
+    ps -A | grep $1
+    if [ $? != 0 ]
+    then
+	if [ $1 == "picom" ]
+	then
+ 	    $1 --experimental-backend -b &
+	else
+	    $1 &
+	fi
+    else
+	killall $1
+	start $1
+    fi
+}
 
-#start "picom --experimental-backend -b"
-#start "nm-applet"
-#start "slstatus"
-#start "dunst"
-
-picom --experimental-backend -b &
-nm-applet &
-slstatus &
-dunst &
+start "picom"
+start "nm-applet"
+start "slstatus"
+start "dunst"
 
 feh --bg-fill ~/.local/share/dwm/wallpaper.png
