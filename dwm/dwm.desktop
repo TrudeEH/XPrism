@@ -1,0 +1,6 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=TruDE
+Comment=Trude's Desktop Environment
+Exec=dwm
+Type=XSession

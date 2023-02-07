@@ -1,17 +1,16 @@
 /* See LICENSE file for copyright and license details. */
 
 /* Global config file */
-
 #include "../config.h"
 
 /* appearance */
 static const unsigned int borderpx       = borderSize;   /* border pixel of windows */
-static const unsigned int snap           = 32;  /* snap pixel */
+static const unsigned int snap           = snapPixel;  /* snap pixel */
 static const unsigned int gappih         = gapSizeWindow;  /* horiz inner gap between windows */
 static const unsigned int gappiv         = gapSizeWindow;  /* vert inner gap between windows */
 static const unsigned int gappoh         = gapSizeScreen;  /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov         = gapSizeScreen;  /* vert outer gap between windows and screen edge */
-static const int smartgaps_fact          = 1;   /* gap factor when there is only one client; 0 = no gaps, 3 = 3x outer gaps */
+static const int smartgaps_fact          = smartGaps;   /* gap factor when there is only one client; 0 = no gaps, 3 = 3x outer gaps */
 static const char autostartblocksh[]     = "autostart_blocking.sh";
 static const char autostartsh[]          = "autostart.sh";
 static const char dwmdir[]               = "dwm";
@@ -22,16 +21,16 @@ static const int bar_height              = barHeight;   /* 0 means derive from f
 static const int vertpad                 = barGap;  /* vertical padding of bar */
 static const int sidepad                 = barGap;  /* horizontal padding of bar */
 /* Status is to be shown on: -1 (all monitors), 0 (a specific monitor by index), 'A' (active monitor) */
-static const int statusmon               = -1;
-static const int horizpadbar             = 2;   /* horizontal padding for statusbar */
-static const int vertpadbar              = 5;   /* vertical padding for statusbar */
-static const unsigned int systrayspacing = 1;   /* systray spacing */
+static const int statusmon               = statusMonitor;
+static const int horizpadbar             = horizontalPaddingBar;   /* horizontal padding for statusbar */
+static const int vertpadbar              = verticalPaddingBar;   /* vertical padding for statusbar */
+static const unsigned int systrayspacing = systraySpacing;   /* systray spacing */
 static const int showsystray             = barTray;   /* 0 means no systray */
 
 /* Indicators: see patch/bar_indicators.h for options */
-static int tagindicatortype              = INDICATOR_TOP_LEFT_SQUARE;
-static int tiledindicatortype            = INDICATOR_NONE;
-static int floatindicatortype            = INDICATOR_TOP_LEFT_SQUARE;
+static int tagindicatortype              = tagIndicatorType;
+static int tiledindicatortype            = tiledIndicatorType;
+static int floatindicatortype            = floatIndicatorType;
 static const int quit_empty_window_count = 0;   /* only allow dwm to quit if no (<= count) windows are open */
 
 static const char *fonts[]               = { "monospace:size=10" };
@@ -158,7 +157,7 @@ static const BarRule barrules[] = {
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size 2hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 static const int decorhints  = 1;    /* 1 means respect decoration hints */
 
