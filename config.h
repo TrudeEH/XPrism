@@ -32,9 +32,27 @@
  *                        Proceed with caution                       *
  *********************************************************************/
 
-/* DWM Appearance */
+/* Lock Screen Settings */
+#define slockMonitorTime 5 /* Time in seconds before the monitor shuts down */
+#define slockBlocksEnabled 1 /* 0 -> Don't show blocks */
+#define slockBlocksWidth 0 /* 0 -> Full width */
+#define slockBlocksHeight 16
+#define slockBlocksX 0
+#define slockBlocksY 0
+#define slockBlocksCount 10
+#define slockAlpha 0.8
+#define slockFailCount 0 /* Number of failed attempts until slockFailCommand is executed. */
+#define slockFailCommand "shutdown"
 
-/* Settings */
+/* Dmenu Settings */
+#define dmenuTopBar barTop /* Place dmenu on top/bottom. 0 -> Bottom. */
+#define dmenuOpacity 1
+#define dmenuCenter 1
+#define dmenuMinWidth 500
+#define dmenuLines 15 /* Only applies if centered. 0 -> default.*/
+#define dmenuBorderWidth borderSize
+
+/* DWM Settings */
 #define snapPixel           32
 #define smartGaps            1 /* Gap factor when there is only one client. 0 -> no gaps; 3 -> 3x outer gaps */
 #define statusMonitor       -1 /* Show status on: -1 -> All monitors; 0,2,3... -> A specific monitor by index; A -> Active monitor */

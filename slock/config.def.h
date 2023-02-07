@@ -14,35 +14,29 @@ static const char *colorname[NUMCOLS] = {
 };
 
 
-
 /* lock screen opacity */
-static const float alpha = 0.8;
+static const float alpha = slockAlpha;
 
 /* treat a cleared input like a wrong password (color) */
 static const int failonclear = 1;
 
-
 /* number of failed password attempts until failcommand is executed.
    Set to 0 to disable */
-static const int failcount = 0;
+static const int failcount = slockFailCount;
 
 /* command to be executed after [failcount] failed password attempts */
-static const char *failcommand = "shutdown";
-
-
+static const char *failcommand = slockFailCommand;
 
 /* time in seconds before the monitor shuts down */
-static const int monitortime = 5;
+static const int monitortime = slockMonitorTime;
 
-static short int blocks_enabled = 1; // 0 = don't show blocks
-static const int blocks_width = 0; // 0 = full width
-static const int blocks_height = 16;
+static short int blocks_enabled = slockBlocksEnabled; // 0 = don't show blocks
+static const int blocks_width = slockBlocksWidth; // 0 = full width
+static const int blocks_height = slockBlocksHeight;
 
 // position
-static const int blocks_x = 0;
-static const int blocks_y = 0;
+static const int blocks_x = slockBlocksX;
+static const int blocks_y = slockBlocksY;
 
 // Number of blocks
-static const int blocks_count = 10;
-
-
+static const int blocks_count = slockBlocksCount;
