@@ -34,6 +34,35 @@
 
 /* DWM Appearance */
 
+/* Settings */
+#define snapPixel           32
+#define smartGaps            1 /* Gap factor when there is only one client. 0 -> no gaps; 3 -> 3x outer gaps */
+#define statusMonitor       -1 /* Show status on: -1 -> All monitors; 0,2,3... -> A specific monitor by index; A -> Active monitor */
+#define horizontalPaddingBar 2 /* Horizontal padding for the statusbar */
+#define verticalPaddingBar   5 /* Vertical padding for the statusbar */
+#define systraySpacing       1 /* Systray Spacing*/
+
+/* Indicators*/
+/*	INDICATOR_NONE
+	INDICATOR_TOP_LEFT_SQUARE
+        INDICATOR_TOP_LEFT_LARGER_SQUARE
+        INDICATOR_TOP_BAR
+        INDICATOR_TOP_BAR_SLIM
+        INDICATOR_BOTTOM_BAR
+        INDICATOR_BOTTOM_BAR_SLIM
+        INDICATOR_BOX
+        INDICATOR_BOX_WIDER
+        INDICATOR_BOX_FULL
+        INDICATOR_CLIENT_DOTS
+        INDICATOR_RIGHT_TAGS
+        INDICATOR_PLUS
+        INDICATOR_PLUS_AND_SQUARE
+	INDICATOR_PLUS_AND_LARGER_SQUARE */
+
+#define tagIndicatorType   INDICATOR_TOP_LEFT_SQUARE
+#define tiledIndicatorType INDICATOR_NONE
+#define floatIndicatorType INDICATOR_TOP_LEFT_SQUARE
+
 /* Colors */
 /* Normal */
 #define normalFg colorFg
