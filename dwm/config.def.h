@@ -198,9 +198,11 @@ static const Layout layouts[] = {
 static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *slock[] = { "slock", NULL };
+static const char *helperScript[] = { "/usr/share/TruDE/shortcuts.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key            function                argument */
+	{ MODKEY, 			XK_a,	       spawn,		       {.v = helperScript} },
 	{ MODKEY,                       XK_p,          spawn,                  {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = termcmd } },
 	{ MODKEY,                       XK_b,          togglebar,              {0} },
