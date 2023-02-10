@@ -1,6 +1,6 @@
 #! /bin/bash
 
-choice=$(echo -e "Update TruDE\nKeyboard Shortcuts\nEdit config.h\nShutdown System" | dmenu -l 30 -p "TruDE Menu")
+choice=$(echo -e "Update TruDE\nKeyboard Shortcuts\nShutdown System" | dmenu -l 30 -p "TruDE Menu")
 
 if [ "$choice" == "Keyboard Shortcuts" ]
 then
@@ -11,7 +11,4 @@ then
 elif [ "$choice" == "Shutdown System" ]
 then
 	st -e sudo shutdown now
-elif [ "$choice" == "Edit config.h" ]
-then
-	st -e vi ~/TruDE/config.h
 fi
