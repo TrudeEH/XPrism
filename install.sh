@@ -1,6 +1,5 @@
 #! /bin/bash
 
-clear
 echo " _______         _____  ______  "
 echo "|__   __|       |  __ \|  ____| "
 echo "   | |_ __ _   _| |  | | |__    "
@@ -70,3 +69,9 @@ cp -f dunstrc ~/.config/dunst/dunstrc
 mkdir -p ~/.local/share/dwm/
 cp -f dwm/autostart.sh ~/.local/share/dwm/
 cp -f wallpaper.png ~/.local/share/dwm/
+
+# Configure the shortcuts helper script
+sudo mkdir -p /usr/share/TruDE
+sudo cp -f shortcuts.sh /usr/share/TruDE
+sudo cp -f dwm/config.def.h /usr/share/TruDE
+sudo cp -f update.sh /usr/share/TruDE
