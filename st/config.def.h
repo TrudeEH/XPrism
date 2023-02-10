@@ -8,7 +8,7 @@
 
 #include "../config.h"
 
-static char *font = "monospace:pixelsize=14:antialias=true:autohint=true";
+static char *font = terminalFont;
 static int borderpx = 2;
 static char *url_opener = "xdg-open";
 

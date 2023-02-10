@@ -33,7 +33,7 @@ static int tiledindicatortype            = tiledIndicatorType;
 static int floatindicatortype            = floatIndicatorType;
 static const int quit_empty_window_count = 0;   /* only allow dwm to quit if no (<= count) windows are open */
 
-static const char *fonts[]               = { "monospace:size=10" };
+static const char *fonts[]               = { textFont };
 
 static char colorNone[]                  = "#000000"; // placeholder value
 static char *colors[][ColCount] = {
