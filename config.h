@@ -14,6 +14,9 @@
 #define colorPrimary	blue   /* Primary color (borders and selections) */
 #define colorInactive	gray3  /* Inactive color (hidden elements and unselected borders */
 
+#define textFont	"monospace:size=10"
+#define terminalFont	"monospace:pixelsize=14:antialias=true:autohint=true"
+
 #define borderSize	2      /* Border size in pixels */
 #define gapSizeWindow   5      /* Gap between windows in pixels */
 #define gapSizeScreen   5      /* Gap between the windows and the edges of the screen */

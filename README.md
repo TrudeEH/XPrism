@@ -17,10 +17,8 @@ TruDE supports any device capable of running Linux, including arm and 32bit proc
 - [ ] Add a minimal browser (like surf)
 - [ ] Write the wiki
 - [ ] README.md
-- [ ] Keybindings pop-up
-- [ ] Shutdown/Logout dmenu script
 
-- [ ] Add every config option to the global config.h
+- [ ] Add more color options to the config and upgrade the theming system.
 
 ### DWM Patches
 - BAR_SYSTRAY_PATCH
