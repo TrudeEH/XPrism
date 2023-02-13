@@ -13,7 +13,7 @@ static const unsigned int gappov         = gapSizeScreen;  /* vert outer gap bet
 static const int smartgaps_fact          = smartGaps;   /* gap factor when there is only one client; 0 = no gaps, 3 = 3x outer gaps */
 static const char autostartblocksh[]     = "autostart_blocking.sh";
 static const char autostartsh[]          = "autostart.sh";
-static const char dwmdir[]               = "dwm";
+static const char dwmdir[]               = "TruDE";
 static const char localshare[]           = ".local/share";
 static const int showbar                 = barToggle;   /* 0 means no bar */
 static const int topbar                  = barTop;   /* 0 means bottom bar */

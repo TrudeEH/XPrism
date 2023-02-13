@@ -14,4 +14,4 @@ start "nm-applet"
 start "slstatus"
 start "dunst"
 
-feh --bg-fill ~/.local/share/dwm/wallpaper.png
+nitrogen --restore
