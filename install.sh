@@ -77,5 +77,9 @@ cp -f dwm/config.def.h ~/.local/share/TruDE
 cp -f update.sh ~/.local/share/TruDE
 
 # Configure nitrogen
-mkdir -p ~/.config/nitrogen
-cp nitrogen/* ~/.config/nitrogen
+ls ~/.config/nitrogen | grep nitrogen*
+if [ $? != 0 ]
+then
+	mkdir -p ~/.config/nitrogen
+	cp nitrogen/* ~/.config/nitrogen
+fi
