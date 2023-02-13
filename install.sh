@@ -68,7 +68,7 @@ cp -f dunstrc ~/.config/dunst/dunstrc
 # Autostart + Wallpaper
 mkdir -p ~/.local/share/TruDE/
 cp -f dwm/autostart.sh ~/.local/share/TruDE/
-cp -f wallpaper.png ~/.local/share/TruDE/
+sudo cp -f wallpaper.png /usr/share/TruDE/
 
 # Configure the shortcuts helper script
 sudo mkdir -p /usr/share/TruDE
