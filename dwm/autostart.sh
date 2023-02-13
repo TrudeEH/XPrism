@@ -13,5 +13,6 @@ start "picom"
 start "nm-applet"
 start "slstatus"
 start "dunst"
+start "pasystray"
 
 nitrogen --restore

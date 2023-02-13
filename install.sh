@@ -22,7 +22,7 @@ if [ $choice == "1" ] ; then
 	sudo apt install -y network-manager-gnome
 	sudo apt install -y dunst
 	sudo apt install -y fonts-font-awesome
-	sudo apt install -y nitrogen
+	sudo apt install -y nitrogen pasystray
 
 elif [ $choice == "2" ] ; then
 	sudo pacman -Sy
