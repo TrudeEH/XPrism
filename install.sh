@@ -22,7 +22,7 @@ if [ $choice == "1" ] ; then
 	sudo apt install -y network-manager-gnome
 	sudo apt install -y dunst
 	sudo apt install -y fonts-font-awesome
-	sudo apt install -y feh
+	sudo apt install -y nitrogen
 
 elif [ $choice == "2" ] ; then
 	sudo pacman -Sy
@@ -66,12 +66,14 @@ cp -f dunstrc ~/.config/dunst/dunstrc
 
 
 # Autostart + Wallpaper
-mkdir -p ~/.local/share/dwm/
-cp -f dwm/autostart.sh ~/.local/share/dwm/
-cp -f wallpaper.png ~/.local/share/dwm/
+mkdir -p ~/.local/share/TruDE/
+cp -f dwm/autostart.sh ~/.local/share/TruDE/
+cp -f wallpaper.png ~/.local/share/TruDE/
 
 # Configure the shortcuts helper script
-sudo mkdir -p /usr/share/TruDE
-sudo cp -f shortcuts.sh /usr/share/TruDE
-sudo cp -f dwm/config.def.h /usr/share/TruDE
-sudo cp -f update.sh /usr/share/TruDE
+cp -f shortcuts.sh ~/.local/share/TruDE
+cp -f dwm/config.def.h ~/.local/share/TruDE
+cp -f update.sh ~/.local/share/TruDE
+
+# Configure nitrogen
+cp nitrogen/* ~/.config/nitrogen
