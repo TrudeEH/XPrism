@@ -71,7 +71,8 @@ cp -f dwm/autostart.sh ~/.local/share/TruDE/
 cp -f wallpaper.png ~/.local/share/TruDE/
 
 # Configure the shortcuts helper script
-cp -f shortcuts.sh ~/.local/share/TruDE
+sudo mkdir -p /usr/share/TruDE
+sudo cp -f shortcuts.sh /usr/share/TruDE
 cp -f dwm/config.def.h ~/.local/share/TruDE
 cp -f update.sh ~/.local/share/TruDE
 
