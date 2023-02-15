@@ -15,6 +15,9 @@ kscrolldown(const Arg* a)
 		tfulldirt();
 	}
 
+
+	if (n > 0)
+		restoremousecursor();
 }
 
 void
@@ -36,4 +39,7 @@ kscrollup(const Arg* a)
 		tfulldirt();
 	}
 
+
+	if (n > 0)
+		restoremousecursor();
 }

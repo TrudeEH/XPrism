@@ -33,6 +33,19 @@ void set_notifmode(int type, KeySym ksym)
 	drawregion(0, bot, col, bot + 1);
 }
 
+Glyph getglyph(Term term, int y, int x)
+{
+	Glyph g;
+	int realy = y - term.scr;
+	if(realy >= 0) {
+		g = term.line[realy][x];
+	} else {
+		realy = term.histi - term.scr + y + 1;
+		g = term.hist[realy][x];
+	}
+	return g;
+}
+
 void select_or_drawcursor(int selectsearch_mode, int type)
 {
 	int done = 0;
@@ -42,7 +55,8 @@ void select_or_drawcursor(int selectsearch_mode, int type)
 		xsetsel(getsel());
 	} else {
 		xdrawcursor(term.c.x, term.c.y, term.line[term.c.y][term.c.x],
-					term.ocx, term.ocy, term.line[term.ocy][term.ocx]);
+					term.ocx, term.ocy, term.line[term.ocy][term.ocx],
+					term.line[term.ocy], term.col);
 	}
 }
 

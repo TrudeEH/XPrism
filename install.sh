@@ -21,7 +21,7 @@ if [ $choice == "1" ] ; then
 	sudo apt install -y compton
 	sudo apt install -y network-manager-gnome
 	sudo apt install -y dunst
-	sudo apt install -y fonts-font-awesome
+	sudo apt install -y fonts-font-awesome fonts-firacode libharfbuzz-dev
 	sudo apt install -y nitrogen pasystray
 
 elif [ $choice == "2" ] ; then
