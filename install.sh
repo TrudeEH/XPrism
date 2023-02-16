@@ -66,15 +66,15 @@ cp -f dunstrc ~/.config/dunst/dunstrc
 
 
 # Autostart + Wallpaper
-mkdir -p ~/.local/share/TruDE/
-cp -f dwm/autostart.sh ~/.local/share/TruDE/
-sudo cp -f wallpaper.png /usr/share/TruDE/
+mkdir -p ~/.local/share/XPrism/
+cp -f dwm/autostart.sh ~/.local/share/XPrism/
+sudo cp -f wallpaper.png /usr/share/XPrism/
 
 # Configure the shortcuts helper script
-sudo mkdir -p /usr/share/TruDE
-sudo cp -f shortcuts.sh /usr/share/TruDE
-cp -f dwm/config.def.h ~/.local/share/TruDE
-cp -f update.sh ~/.local/share/TruDE
+sudo mkdir -p /usr/share/XPrism
+sudo cp -f shortcuts.sh /usr/share/XPrism
+cp -f dwm/config.def.h ~/.local/share/XPrism
+cp -f update.sh ~/.local/share/XPrism
 
 # Configure nitrogen
 ls ~/.config/nitrogen | grep nitrogen*

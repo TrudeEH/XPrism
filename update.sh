@@ -6,11 +6,11 @@ cd ~
 
 echo
 echo "Clone Github repo (Will fail if already present. This is normal.)..."
-git clone https://github.com/TrudeEH/TruDE
+git clone https://github.com/TrudeEH/XPrism
 
 echo
 echo "CD into repo..."
-cd TruDE
+cd XPrism
 
 echo
 echo "Pull changes..."

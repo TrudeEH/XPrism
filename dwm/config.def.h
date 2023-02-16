@@ -13,7 +13,7 @@ static const unsigned int gappov         = gapSizeScreen;  /* vert outer gap bet
 static const int smartgaps_fact          = smartGaps;   /* gap factor when there is only one client; 0 = no gaps, 3 = 3x outer gaps */
 static const char autostartblocksh[]     = "autostart_blocking.sh";
 static const char autostartsh[]          = "autostart.sh";
-static const char dwmdir[]               = "TruDE";
+static const char dwmdir[]               = "XPrism";
 static const char localshare[]           = ".local/share";
 static const int showbar                 = barToggle;   /* 0 means no bar */
 static const int topbar                  = barTop;   /* 0 means bottom bar */
@@ -198,7 +198,7 @@ static const Layout layouts[] = {
 static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *slock[] = { "slock", NULL };
-static const char *helperScript[] = { "/usr/share/TruDE/shortcuts.sh", NULL };
+static const char *helperScript[] = { "/usr/share/XPrism/shortcuts.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key            function                argument */
