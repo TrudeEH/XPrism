@@ -19,15 +19,18 @@ git pull
 if [ $? != 0 ]
 then
 	echo
-	echo "Git conflict detected!"
+	echo "==========[GIT CONFLICT DETECTED! ]=========="
 	echo "Resetting the Git repository will fix the issue."
 	echo "Wipe your settings?"
-	read -p "y/n" wipe
+	echo
+	read -p "y/n: " wipe
 	if [ $wipe == "y" ]
 	then
 		echo "Wipe confirmed."
+		sleep 1
 		git reset --hard
 		echo "done."
+		sleep 2
 	else
 		echo "Update cancelled."
 		echo "The script will exit in 10 seconds."
