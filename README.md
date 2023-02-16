@@ -1,6 +1,6 @@
-# Trude's Desktop Environment (XPrism)
-
-![logo](https://github.com/TrudeEH/XPrism/blob/main/XPrism.png)
+<p align="center">
+  <img src="https://github.com/TrudeEH/XPrism/blob/main/XPrism.png" />
+</p>
 
 [![license](https://img.shields.io/badge/license-GPL-brightgreen.svg)](https://github.com/TrudeEH/XPrism/blob/main/LICENSE)
 
