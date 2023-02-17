@@ -10,3 +10,6 @@ This allows for the DE to be operated exclusively with a keyboard.
 XPrism supports any device capable of running Linux, including arm and 32bit processors. This makes it great for servers, that may have limited resources for the OS.
 
 ![Screenshot](https://github.com/TrudeEH/XPrism/blob/main/screenshot.png)
+
+### Wiki
+[Install](../../wiki/Home)
