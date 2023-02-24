@@ -1,11 +1,3 @@
-<a name="readme-top"></a>
-
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -24,6 +16,14 @@
     <a href="https://github.com/TrudeEH/XPrism/issues">Request Feature</a>
   </p>
 </div>
+
+<a name="readme-top"></a>
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -66,8 +66,6 @@ If you want to try something new that makes your workspace more productive, try 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
-
-* ![Debian](https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white)
 * ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
 * ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
 
@@ -109,17 +107,7 @@ Read the [wiki](https://github.com/TrudeEH/XPrism/wiki/Home) for more informatio
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- CONTACT -->
-## Contact
-
-Mastodon - [@ehtrude](https://techhub.social/@ehtrude)
-
-Project Link: https://github.com/TrudeEH/XPrism/
+Distributed under the GPL-V3 License. See `LICENSE` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
