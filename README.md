@@ -67,10 +67,9 @@ If you want to try something new that makes your workspace more productive, try 
 
 ### Built With
 
-* ![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white)
-* ![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white)
+* ![Debian](https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white)
+* ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
 * ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
-* ![PowerShell](https://img.shields.io/badge/PowerShell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -79,46 +78,29 @@ If you want to try something new that makes your workspace more productive, try 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This section will tell you how to get TrudeVim up and running on your machine
+This section will tell you how to get XPrism up and running on your machine
 
 ### Prerequisites
 
-You need a 64-bit or ARM machine running macOS, Linux or Windows
+You need a machine running Linux
 
 ### Installation
 
-* #### macOS
-:warning: You need to have Homebrew and git installed
+:warning: You need to have git installed
 1. Clone the repository
 ```sh
-git clone https://github.com/TrudeEH/TrudeVim/
+git clone https://github.com/TrudeEH/XPrism/
 ```
-2. Get in the TrudeVim directory
+2. Get in the XPrism directory
 ```sh
-cd TrudeVim
+cd XPrism
 ```
 3. Run the install script
 ```sh
-sh install.sh
+./install.sh
 ```
 
-* #### Linux
-:warning: You need to have Homebrew and git installed
-1. Clone the repository
-```sh
-git clone https://github.com/TrudeEH/TrudeVim/
-```
-2. Get in the TrudeVim directory
-```sh
-cd TrudeVim
-```
-3. Run the install script
-```sh
-sh install.sh
-```
-
-* #### Windows
-The Windows script is still in progress
+Read the [wiki](https://github.com/TrudeEH/XPrism/wiki/Home) for more information
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -137,19 +119,19 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Mastodon - [@ehtrude](https://techhub.social/@ehtrude)
 
-Project Link: https://github.com/TrudeEH/TrudeVim/
+Project Link: https://github.com/TrudeEH/XPrism/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-[contributors-shield]: https://img.shields.io/github/contributors/TrudeEH/TrudeVim.svg?style=for-the-badge
-[contributors-url]: https://github.com/TrudeEH/TrudeVim/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/TrudeEH/TrudeVim.svg?style=for-the-badge
-[forks-url]: https://github.com/TrudeEH/TrudeVim/network/members
-[stars-shield]: https://img.shields.io/github/stars/TrudeEH/TrudeVim.svg?style=for-the-badge
-[stars-url]: https://github.com/TrudeEH/TrudeVim/stargazers
-[issues-shield]: https://img.shields.io/github/issues/TrudeEH/TrudeVim.svg?style=for-the-badge
-[issues-url]: https://github.com/TrudeEH/TrudeVim/issues
-[license-shield]: https://img.shields.io/github/license/TrudeEH/TrudeVim.svg?style=for-the-badge
-[license-url]: https://github.com/TrudeEH/TrudeVim/blob/main/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/TrudeEH/XPrism.svg?style=for-the-badge
+[contributors-url]: https://github.com/TrudeEH/XPrism/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/TrudeEH/XPrism.svg?style=for-the-badge
+[forks-url]: https://github.com/TrudeEH/XPrism/network/members
+[stars-shield]: https://img.shields.io/github/stars/TrudeEH/XPrism.svg?style=for-the-badge
+[stars-url]: https://github.com/TrudeEH/XPrism/stargazers
+[issues-shield]: https://img.shields.io/github/issues/TrudeEH/XPrism.svg?style=for-the-badge
+[issues-url]: https://github.com/TrudeEH/XPrism/issues
+[license-shield]: https://img.shields.io/github/license/TrudeEH/XPrism.svg?style=for-the-badge
+[license-url]: https://github.com/TrudeEH/XPrism/blob/main/LICENSE
 [product-screenshot]: https://github.com/TrudeEH/XPrism/blob/main/screenshot.png
