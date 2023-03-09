@@ -25,43 +25,12 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
-
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
 ![XPrism Screen Shot][product-screenshot]
 
-I was tired of using the same heavy desktop environment over and over again. So I decided to create this!
-
-Here's why you should use XPrism:
-* It's super lightweight
-* Works with Debian
-* It has a super clean interface
-
-If you want to try something new that makes your workspace more productive, try XPrism!
+XPrism is an open source desktop environment for Linux, designed to be extremely lightweight and customizable. Instead of floating windows, XPrism tiles windows automatically. This allows for the DE to be operated exclusively with a keyboard. XPrism supports any device capable of running Linux, including arm and 32bit processors. This makes it great for servers, that may have limited resources for the OS.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -71,38 +40,12 @@ If you want to try something new that makes your workspace more productive, try 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This section will tell you how to get XPrism up and running on your machine
-
-### Prerequisites
-
-You need a machine running Linux
-
-### Installation
-
-:warning: You need to have git installed
-1. Clone the repository
-```sh
-git clone https://github.com/TrudeEH/XPrism/
-```
-2. Get in the XPrism directory
-```sh
-cd XPrism
-```
-3. Run the install script
-```sh
-./install.sh
-```
-
-Read the [wiki](https://github.com/TrudeEH/XPrism/wiki/Home) for more information
+Please read the install guide on the [wiki](https://github.com/TrudeEH/XPrism/wiki/Home).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- LICENSE -->
 ## License
